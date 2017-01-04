@@ -1,0 +1,228 @@
+<include file="Public:head"/>
+	<link href="Public/media/css/jquery.fancybox.css" rel="stylesheet" />
+	<link href="Public/media/css/chosen.css" rel="stylesheet" type="text/css"/>
+			<!-- BEGIN PAGE CONTAINER-->
+
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE HEADER-->   
+
+				<div class="row-fluid">
+
+					<div class="span12">
+						<!-- BEGIN STYLE CUSTOMIZER -->
+						<!-- END BEGIN STYLE CUSTOMIZER -->   
+						<h3 class="page-title">
+广告列表<small>   Template editing system</small> 
+						</h3>
+						<ul class="breadcrumb">
+
+							<li>
+
+								<i class="icon-home"></i>
+
+								<a href="{:U('index')}">首页</a> 
+
+								<span class="icon-angle-right"></span>
+
+							</li>
+
+							<li>
+
+								<a href="#">首页广告管理</a>
+
+								<span class="icon-angle-right"></span>
+
+							</li>
+
+							<li><a href="{:U('ad/friendlinks')}">广告列表 </a></li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE HEADER-->
+
+				<!-- BEGIN PAGE CONTENT-->
+
+				<div class="row-fluid">
+
+					<div class="span12">
+
+						<!-- BEGIN SAMPLE FORM PORTLET-->   
+
+		  <div class="tabbable tabbable-custom tabbable-full-width">
+							<ul class="nav nav-tabs">
+                               <li class="active"> 
+<a href=""> 首页广告管理</a> 
+            </li>
+                <li class=""> 
+                <a href="{:U('ad/friendlinks')}"> 友情链接管理 </a> </li>
+							</ul>
+                            <hr>
+                </div>
+         
+           
+                     <p> <a href="?c=Ad&a=add&filetype=1" class="btn green"><i class="icon-plus"></i> 添加首页广告</a></p>
+                      
+
+    <div class="portlet-body form">
+
+ <foreach name='select' item='item' >
+<div class="span3">
+<div class="item" style="background-color: #ebe9e9;">
+<a class="fancybox-button" data-rel="fancybox-button" title="<b>首页广告大图-[{$item.name}]</b><br> 添加时间：{$item.date|date='Y-m-d H:i:s',###}" href="/Uploads/{$item.logo}">
+												<div class="zoom">
+													<img src="/Uploads/{$item.logo}" alt="{$item.date|date='Y-m-d H:i:s',###}">                             
+													<div class="zoom-icon"></div>
+
+												</div>
+
+											</a>
+
+											<div class="details" style="margin-top:-20px">
+												<a href="{$item.url}" class="icon" style=" font-size:30px" target="_blank"><i class="icon-link"></i>   </a>
+												<a href="?c=ad&a=edit&id={$item.id}" class="icon" style=" font-size:30px">    <i class="icon-pencil"></i></a>
+<a href="javascript:;" onClick="javascript:if(confirm('你确信要删除[{$item.name}]吗？')) window.location='?c=ad&a=del&id={$item.id}<eq name="flag" value="useranli"  class="icon">&flag=useranli</eq>'" style=" font-size:40px">
+					    <i class="icon-remove"></i></a>    
+
+											</div>
+
+										</div>
+
+									</div>
+     </foreach>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div></div></div>
+
+ 
+
+
+<div class="row-fluid">
+<div class="span12">
+<div class="pagination pull-right">
+<ul> {$page}</ul>
+</div>
+</div>
+</div>
+         
+</div>
+</div>
+
+<div class="footer">
+
+		<div class="footer-inner">
+
+			2015 © 绵阳微赢时代信息科技有限公司 by keenthemes.
+
+		</div>
+
+		<div class="footer-tools">
+
+			<span class="go-top">
+
+			<i class="icon-angle-up"></i>
+
+			</span>
+
+		</div>
+
+	</div>
+<script src="Public/media/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+
+	<script src="Public/media/js/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+
+	<!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+
+	<script src="Public/media/js/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>      
+
+	<script src="Public/media/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<!--[if lt IE 9]>
+
+	<script src="Public/media/js/excanvas.min.js"></script>
+
+	<script src="Public/media/js/respond.min.js"></script>  
+
+	<![endif]-->   
+
+	<script src="Public/media/js/jquery.slimscroll.min.js" type="text/javascript"></script>
+
+	<script src="Public/media/js/jquery.blockui.min.js" type="text/javascript"></script>  
+
+	<script src="Public/media/js/jquery.cookie.min.js" type="text/javascript"></script>
+
+	<script src="Public/media/js/jquery.uniform.min.js" type="text/javascript" ></script>
+
+	<!-- END CORE PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+
+	<script src="Public/media/js/jquery.fancybox.pack.js"></script>   
+
+	<script type="text/javascript" src="Public/media/js/chosen.jquery.min.js"></script>
+
+	<!-- END PAGE LEVEL PLUGINS -->
+
+	<!-- BEGIN PAGE LEVEL SCRIPTS -->
+
+	<script src="Public/media/js/app.js"></script>   
+
+	<script src="Public/media/js/gallery.js"></script>  
+
+	<!-- END PAGE LEVEL SCRIPTS -->
+
+
+
+
+<script>
+
+		jQuery(document).ready(function() {       
+
+		   // initiate layout and plugins
+
+		   App.init();
+
+		   Gallery.init();
+
+		});
+
+	</script>
+
+	<!-- END JAVASCRIPTS -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];  _gaq.push(['_setAccount', 'UA-37564768-1']);  _gaq.push(['_setDomainName', 'keenthemes.com']);  _gaq.push(['_setAllowLinker', true]);  _gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();</script></body>
+
+<!-- END BODY -->
+
+</html>
+ 
+

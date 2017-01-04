@@ -1,0 +1,115 @@
+<include file="Public:head"/>
+<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+						<h3 class="page-title">
+
+							系统管理 <small>    System management</small>
+
+						</h3>
+
+						<ul class="breadcrumb">
+
+							<li>
+
+								<i class="icon-home"></i>
+
+								<a href="index.html">首页</a> 
+
+								<i class="icon-angle-right"></i>
+
+							</li>
+
+							<li>
+
+								<a href="#">系统管理</a>
+
+								<i class="icon-angle-right"></i>
+
+							</li>
+
+							<li><a href="#">在线升级</a></li>
+
+						</ul>
+
+						<!-- END PAGE TITLE & BREADCRUMB-->
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE HEADER--
+                
+                
+                <div class="tabbable tabbable-custom tabbable-full-width">
+
+							<ul class="nav nav-tabs">
+
+				<li class="{$ui.sys_set}"><a href="{:U('sys/set')}">网站设置</a></li>
+				<li class="{$ui.sys_setmail}"><a href="{:U('sys/setmail')}">邮件服务器设置</a></li>
+				<li class="{$ui.sys_wxapi}"><a href="{:U('sys/wxapi')}">SDK分享配置</a></li>
+		        <li class="{$ui.Update}"> <a href="{:U('/Update')}"> 在线更新</a> </li>
+                <li class="{$ui.Database}"> <a href="{:U('/Database/index/type/export')}"> 数据备份</a> </li>
+                       
+							</ul>
+                            <hr>
+                
+                </div>
+                
+				<!-- BEGIN PAGE CONTENT-->          
+
+				<div class="row-fluid">
+
+					<div class="span12 ">
+						<div class=" details">
+   {$updatenowinfo}
+   
+   {$ver}
+    </div>
+</div>
+
+</div>
+
+		<div class="well">
+								<address>
+                                
+                                
+                                
+                             <h3>更新帮助说明</h3>
+                        
+                                <hr />
+  
+    <div class="con dcon">
+    <ul class="myinfo kjinfo">
+   <li class="title">更新注意事项</li>
+   <li>注意了：在升级前请先备份好您的网站文件，不做备份直接升级可能造成网站不能访问</li>
+   <li>不做备份直接升级造成的网站问题概不负责</li>
+   <li>另外：必须做好数据库备份</li>
+   <li>备份就是把您的网站文件拷贝一份放到其他地方</li>
+	</ul>
+                             
+                             
+                             
+                             
+								</address>
+
+	</div>
+    <p>发起团队：锦尚中国科技</p>
+
+						</div>
+                        
+                        
+                        
+					
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE CONTENT-->
+
+			</div>
+            
+            <include file="Public:foot"/>

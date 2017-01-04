@@ -1,0 +1,92 @@
+<include file="Public:head"/>
+<div class="container-fluid">
+				<!-- BEGIN PAGE HEADER-->
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+						<h3 class="page-title">
+
+							系统管理 <small>    System management</small>
+
+						</h3>
+
+						<ul class="breadcrumb">
+
+							<li>
+
+								<i class="icon-home"></i>
+
+								<a href="index.html">首页</a> 
+
+								<i class="icon-angle-right"></i>
+
+							</li>
+
+							<li>
+
+								<a href="#">系统管理</a>
+
+								<i class="icon-angle-right"></i>
+
+							</li>
+
+							<li><a href="#">在线升级</a></li>
+
+						</ul>
+
+						<!-- END PAGE TITLE & BREADCRUMB-->
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE HEADER-->
+                
+                
+                <div class="tabbable tabbable-custom tabbable-full-width">
+
+							<ul class="nav nav-tabs">
+
+			<include file="Sys:_menu"/>
+                       
+							</ul>
+                            <hr>
+                
+                </div>
+                
+				<!-- BEGIN PAGE CONTENT-->          
+
+				<div class="row-fluid">
+
+					<div class="span12 ">
+						<div class=" details">
+						{$updateinfo}
+                        
+
+							<div class="well">
+								<address>
+                                
+                               <eq name="chanageinfo" value=""><h3>恭喜您，您的系统已经是最新的了</h3><else/><h3>{$lastver}更新内容</h3></eq> 
+                               <span class="muted">{$domain_time}</span>
+                                <hr />
+                             {$chanageinfo}
+								</address>
+
+	</div>
+    <p>发起团队：锦尚中国科技</p>
+
+						</div>
+                        
+                        
+                        
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE CONTENT-->
+
+			</div>
+            
+            <include file="Public:foot"/>
